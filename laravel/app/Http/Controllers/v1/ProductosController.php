@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
  
 class ProductosController extends Controller
 {
+    //esta es mi funcion del get all
     public function getProductos()
     {
         $response_local=new \stdClass();
@@ -15,5 +16,6 @@ class ProductosController extends Controller
         $response_local->data=Producto::all();
 
         return response()->json($response_local,200);
+
     }
 }
